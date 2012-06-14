@@ -44,7 +44,7 @@ CREATE TABLE `pma_bookmark` (
   `label` varchar(255) NOT NULL default '',
   `query` text NOT NULL,
   PRIMARY KEY  (`id`)
-) TYPE=MyISAM COMMENT='Bookmarks';
+) ENGINE=MyISAM COMMENT='Bookmarks';
 
 -- --------------------------------------------------------
 
@@ -63,7 +63,7 @@ CREATE TABLE `pma_column_info` (
   `transformation_options` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`id`),
   UNIQUE KEY `db_name` (`db_name`,`table_name`,`column_name`)
-) TYPE=MyISAM COMMENT='Column information for phpMyAdmin';
+) ENGINE=MyISAM COMMENT='Column information for phpMyAdmin';
 
 -- --------------------------------------------------------
 
@@ -80,7 +80,7 @@ CREATE TABLE `pma_history` (
   `sqlquery` text NOT NULL,
   PRIMARY KEY  (`id`),
   KEY `username` (`username`,`db`,`table`,`timevalue`)
-) TYPE=MyISAM COMMENT='SQL history for phpMyAdmin';
+) ENGINE=MyISAM COMMENT='SQL history for phpMyAdmin';
 
 -- --------------------------------------------------------
 
@@ -94,7 +94,7 @@ CREATE TABLE `pma_pdf_pages` (
   `page_descr` varchar(50) NOT NULL default '',
   PRIMARY KEY  (`page_nr`),
   KEY `db_name` (`db_name`)
-) TYPE=MyISAM COMMENT='PDF relation pages for phpMyAdmin';
+) ENGINE=MyISAM COMMENT='PDF relation pages for phpMyAdmin';
 
 -- --------------------------------------------------------
 
@@ -111,7 +111,7 @@ CREATE TABLE `pma_relation` (
   `foreign_field` varchar(64) NOT NULL default '',
   PRIMARY KEY  (`master_db`,`master_table`,`master_field`),
   KEY `foreign_field` (`foreign_db`,`foreign_table`)
-) TYPE=MyISAM COMMENT='Relation table';
+) ENGINE=MyISAM COMMENT='Relation table';
 
 -- --------------------------------------------------------
 
@@ -126,7 +126,7 @@ CREATE TABLE `pma_table_coords` (
   `x` float unsigned NOT NULL default '0',
   `y` float unsigned NOT NULL default '0',
   PRIMARY KEY  (`db_name`,`table_name`,`pdf_page_number`)
-) TYPE=MyISAM COMMENT='Table coordinates for phpMyAdmin PDF output';
+) ENGINE=MyISAM COMMENT='Table coordinates for phpMyAdmin PDF output';
 
 -- --------------------------------------------------------
 
@@ -139,7 +139,7 @@ CREATE TABLE `pma_table_info` (
   `table_name` varchar(64) NOT NULL default '',
   `display_field` varchar(64) NOT NULL default '',
   PRIMARY KEY  (`db_name`,`table_name`)
-) TYPE=MyISAM COMMENT='Table information for phpMyAdmin';
+) ENGINE=MyISAM COMMENT='Table information for phpMyAdmin';
 
 -- --------------------------------------------------------
 
@@ -155,5 +155,5 @@ CREATE TABLE `pma_designer_coords` (
   `v` TINYINT(4) default NULL,
   `h` TINYINT(4) default NULL,
   PRIMARY KEY (`db_name`,`table_name`)
-) TYPE=MyISAM COMMENT='Table coordinates for Designer'
+) ENGINE=MyISAM COMMENT='Table coordinates for Designer'
 

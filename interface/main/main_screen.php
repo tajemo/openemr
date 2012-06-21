@@ -93,10 +93,12 @@ function allFramesLoaded() {
    <frame src='daemon_frame.php' name='Daemon' scrolling='no' frameborder='0'
     border='0' framespacing='0' />
   </frameset>
-<?php if (empty($GLOBALS['athletic_team'])) { ?>
-  <frameset rows='60%,*' id='fsright' bordercolor='#999999' frameborder='1'>
-<?php } else { ?>
+<?php if (!empty($GLOBALS['athletic_team'])) { ?>                             
   <frameset rows='100%,*' id='fsright' bordercolor='#999999' frameborder='1'>
+<?php } elseif(!empty($GLOBALS['no_bottom_frame'])) { ?>                                                           
+  <frameset rows='100%,*' id='fsright' bordercolor='#999999' frameborder='1'>
+<?php }else{ ?>                                         
+  <frameset rows='60%,*' id='fsright' bordercolor='#999999' frameborder='1'> 
 <?php } ?>
    <frame src='<?php echo $frame1url ?>' name='RTop' scrolling='auto' />
    <frame src='messages/messages.php?form_active=1' name='RBot' scrolling='auto' />
@@ -114,10 +116,12 @@ function allFramesLoaded() {
  </frameset>
  <frameset rows='<?php echo $GLOBALS['titleBarHeight'] + 5 ?>,*' frameborder='1' border='1' framespacing='1'>
   <frame src='main_title.php' name='Title' scrolling='no' frameborder='1' />
-<?php if (empty($GLOBALS['athletic_team'])) { ?>
-  <frameset rows='60%,*' id='fsright' bordercolor='#999999' frameborder='1' border='4' framespacing='4'>
-<?php } else { ?>
-  <frameset rows='100%,*' id='fsright' bordercolor='#999999' frameborder='1' border='4' framespacing='4'>
+<?php if (!empty($GLOBALS['athletic_team'])) { ?>                             
+  <frameset rows='100%,*' id='fsright' bordercolor='#999999' frameborder='1'>
+<?php } elseif(!empty($GLOBALS['no_bottom_frame'])) { ?>                                                           
+  <frameset rows='100%,*' id='fsright' bordercolor='#999999' frameborder='1'>
+<?php }else{ ?>                                         
+  <frameset rows='60%,*' id='fsright' bordercolor='#999999' frameborder='1'> 
 <?php } ?>
    <frame src='<?php echo $frame1url ?>' name='RTop' scrolling='auto' />
    <frame src='messages/messages.php?form_active=1' name='RBot' scrolling='auto' />

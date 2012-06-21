@@ -958,7 +958,7 @@ if ($GLOBALS['athletic_team']) {
   </td>
   <td class='smalltext' align='right' nowrap>
    <b><?php xl('Bot','e') ?></b>
-   <input type='checkbox' name='cb_bot' onclick='toggleFrame(2)' <?php if (empty($GLOBALS['athletic_team'])) echo 'checked '; ?>/>
+   <input type='checkbox' name='cb_bot' onclick='toggleFrame(2)' <?php echo (empty($GLOBALS['athletic_team']) ? ( empty($GLOBALS['no_bottom_frame']) ? 'checked ' : '' ) : ''); ?>/>
   </td>
  </tr>
 </table>

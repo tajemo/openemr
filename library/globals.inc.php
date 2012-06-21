@@ -84,7 +84,8 @@ $USER_SPECIFIC_TABS = array('Appearance',
                             'Connectors');
 $USER_SPECIFIC_GLOBALS = array('default_top_pane',
                                'concurrent_layout',
-                               'css_header',
+                               'css_header', 
+                               'no_bottom_frame',
                                'gbl_pt_list_page_size',
                                'gbl_pt_list_new_window',
                                'units_of_measurement',
@@ -204,6 +205,17 @@ $GLOBALS_METADATA = array(
       'bool',                           // data type
       '0',                              // default = false
       xl('Enables the old Charges panel for entering billing codes and payments. Not recommended, use the Fee Sheet instead.')
+    ),
+    
+     
+    'no_bottom_frame' => array(
+      xl('Disable Bottom Frame'),
+      array(
+        '1' => 'yes',
+        '0' => 'no'
+      ),                           // data type
+      '0',                              // default = false
+      xl('Disable Bottom Frame, will require a full refresh to apply')
     ),
 
     'online_support_link' => array(

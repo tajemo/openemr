@@ -85,7 +85,14 @@ $USER_SPECIFIC_GLOBALS = array('default_top_pane',
                                'date_display_format',
                                'time_display_format',
                                'event_color',
-                               'erx_import_status_message');
+                               'erx_import_status_message',
+                               'imap_mail_host',
+                               'imap_mail_port',
+                               'imap_mail_user',
+                               'imap_mail_pass',
+                               'imap_mail_email'
+                               
+                               );    
 
 $GLOBALS_METADATA = array(
 
@@ -1367,7 +1374,42 @@ $GLOBALS_METADATA = array(
         ),
         '',
         xl('Default Patient Country'),
-    ),
+    ),    
+    
+    'imap_mail_host' => array(
+      xl('Imap Mail Host'),
+      'text',                           // data type
+      '',
+      xl('Enter Your Imap Host Address')
+    ),    
+    
+    'imap_mail_port' => array(
+      xl('Imap Mail Port'),
+      'text',                           // data type
+      '',
+      xl('Enter Your Imap Mail Port')
+    ),     
+    
+    'imap_mail_email' => array(
+      xl('Imap Email Address'),
+      'text',                           // data type
+      '',
+      xl('Enter Your Imap Email Address')
+    ),     
+    
+    'imap_mail_user' => array(
+      xl('Imap Username'),
+      'text',                           // data type
+      '',
+      xl('Enter Your Imap Username')
+    ),    
+    
+    'imap_mail_pass' => array(
+      xl('Imap Mail Password'),
+      'pass',                           // data type
+      '',
+      xl('Enter Your Imap Password')
+    ), 
   ),
   
   'Rx' => array(
@@ -1465,7 +1507,7 @@ $GLOBALS_METADATA = array(
     ),
     'rx_left_margin' => array(
       xl('Rx Left Margin (px)'),
-      'num',
+      'num',                              
       '30',
       xl('Rx Left Margin (px)')
     ),
